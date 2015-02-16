@@ -18,8 +18,9 @@ case node['platform_family']
 end
 
 # Install MailCatcher
-gem_package "mailcatcher" do
+chef_gem "mailcatcher" do
   version node['mailcatcher']['version']
+  options(:ignore_dependencies => true)
   action :install
 end
 
