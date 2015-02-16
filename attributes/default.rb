@@ -18,6 +18,7 @@
 #
 
 default['mailcatcher']['bin'] = '/usr/bin/env catchmail'
+default['mailcatcher']['version'] = "0.5.12"
 
 default['mailcatcher']['http-ip'] = '127.0.0.1'
 default['mailcatcher']['http-port'] = 1080

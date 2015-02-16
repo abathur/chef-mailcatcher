@@ -18,7 +18,10 @@ case node['platform_family']
 end
 
 # Install MailCatcher
-gem_package "mailcatcher"
+gem_package "mailcatcher" do
+  version node['mailcatcher']['version']
+  action :install
+end
 
 if node['mailcatcher']['multiple']
   node['mailcatcher']['instances'].each_pair do |name, instance|
